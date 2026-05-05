@@ -1,6 +1,7 @@
 package io.github.xororz.localdream.data
 
 import android.content.Context
+import androidx.compose.runtime.Immutable
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
@@ -138,6 +139,7 @@ class GenerationPreferences(private val context: Context) {
     }
 }
 
+@Immutable
 data class GenerationPrefs(
     val prompt: String = "",
     val negativePrompt: String = "",

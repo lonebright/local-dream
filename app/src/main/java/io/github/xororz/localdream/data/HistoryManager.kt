@@ -3,6 +3,7 @@ package io.github.xororz.localdream.data
 import android.content.Context
 import android.graphics.Bitmap
 import android.util.Log
+import androidx.compose.runtime.Immutable
 import io.github.xororz.localdream.ui.screens.GenerationParameters
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -10,6 +11,7 @@ import org.json.JSONObject
 import java.io.File
 import java.io.FileOutputStream
 
+@Immutable
 data class HistoryItem(
     val imageFile: File,
     val params: GenerationParameters?,

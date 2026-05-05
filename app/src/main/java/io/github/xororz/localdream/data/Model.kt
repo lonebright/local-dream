@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.Immutable
 import io.github.xororz.localdream.R
 import io.github.xororz.localdream.service.ModelDownloadService
 import kotlinx.coroutines.CoroutineScope
@@ -15,6 +16,7 @@ import java.io.File
 import android.content.Intent
 import android.util.Log
 
+@Immutable
 data class Resolution(
     val width: Int,
     val height: Int
@@ -69,6 +71,7 @@ private fun getDeviceSoc(): String {
     }
 }
 
+@Immutable
 data class DownloadProgress(
     val progress: Float,
     val downloadedBytes: Long,
@@ -98,6 +101,7 @@ sealed class DownloadResult {
     data class Progress(val progress: DownloadProgress) : DownloadResult()
 }
 
+@Immutable
 data class Model(
     val id: String,
     val name: String,
@@ -226,6 +230,7 @@ data class Model(
     }
 }
 
+@Immutable
 data class UpscalerModel(
     val id: String,
     val name: String,

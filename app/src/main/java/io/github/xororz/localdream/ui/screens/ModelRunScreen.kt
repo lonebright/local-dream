@@ -144,6 +144,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.navigation.NavController
+import androidx.compose.runtime.Immutable
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import io.github.xororz.localdream.BuildConfig
@@ -292,6 +293,7 @@ private suspend fun checkBackendHealth(
     }
 }
 
+@Immutable
 data class GenerationParameters(
     val steps: Int,
     val cfg: Float,
